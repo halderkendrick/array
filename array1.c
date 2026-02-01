@@ -2,8 +2,8 @@
 
 int main() {
     int n;
-    int num[100];
-    int sum = 0;
+    float num[100];
+    float sum = 0;
 
     printf("Enter number of elements: ");
     scanf("%d", &n);
@@ -11,10 +11,14 @@ int main() {
     printf("Enter %d numbers: ", n);
 
     for (int i = 0; i < n; i++) {
-        scanf("%d", &num[i]);
+        scanf("%f", &num[i]);
         sum += num[i];
     }
 
-    printf("Sum = %d\n", sum);
+    float avg = sum/n;
+
+    printf("Sum = %.0f\n", sum);
+    printf("Average = %.2f", avg);
+
     return 0;
 }
